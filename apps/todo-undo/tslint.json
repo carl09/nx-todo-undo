@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "nxTodoUndo", "camelCase"],
+    "component-selector": [true, "element", "nx-todo-undo", "kebab-case"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "npmScope": "nx-todo-undo",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "todo-undo": {
+      "tags": []
+    },
+    "todo-undo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["todo-undo"]
+    }
+  }
+}
