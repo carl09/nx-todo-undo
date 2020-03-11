@@ -23,7 +23,7 @@
     type="button"
     class="btn btn-light mb-2"
     (click)="onRedo()"
-    [disabled]="canRedo"
+    [disabled]="!canRedo"
   >
     Redo
   </button>
