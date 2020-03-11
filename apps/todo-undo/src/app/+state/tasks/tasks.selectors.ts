@@ -32,6 +32,6 @@ export const taskList = createSelector(
   showCompleated,
   innerTaskList,
   (show, tasks) => {
-    return show ? tasks : tasks.filter(x => !!x.compleated);
+    return show ? tasks : tasks.filter(x => !x.compleated);
   }
 );

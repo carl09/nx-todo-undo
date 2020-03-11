@@ -32,7 +32,7 @@ export const undoableTasksList = createSelector(
   showCompleated,
   innerUndoableTasksList,
   (show, tasks) => {
-    return show ? tasks : tasks.filter(x => !!x.compleated);
+    return show ? tasks : tasks.filter(x => !x.compleated);
   }
 );
 
