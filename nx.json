@@ -13,10 +13,6 @@
   "projects": {
     "todo-undo": {
       "tags": []
-    },
-    "todo-undo-e2e": {
-      "tags": [],
-      "implicitDependencies": ["todo-undo"]
     }
   }
 }

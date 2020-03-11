@@ -1,0 +1,27 @@
+<nx-todo-undo-tasks-form
+  [canRedo]="canRedo$ | async"
+  [canUndo]="canUndo$ | async"
+  (addTask)="onAddTask($event)"
+  (undo)="onUndo()"
+  (redo)="onRedo()"
+  (hideCompleated)="onHideCompleated()"
+  (showCompleated)="onShowCompleated()"
+></nx-todo-undo-tasks-form>
+
+<div class="row">
+  <nx-todo-undo-tasks-list
+    heading="Tasks"
+    class="col-6"
+    [tasks]="tasks$ | async"
+    (done)="onDone($event)"
+    (delete)="onDelete($event)"
+  >
+  </nx-todo-undo-tasks-list>
+  <nx-todo-undo-tasks-list
+    heading="Undoable Tasks"
+    class="col-6"
+    [tasks]="tasksUndoable$ | async"
+    (done)="onDone($event)"
+    (delete)="onDelete($event)"
+  ></nx-todo-undo-tasks-list>
+</div>

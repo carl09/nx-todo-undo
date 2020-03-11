@@ -1,0 +1,26 @@
+<div>
+  <h2>{{ heading }}</h2>
+  <ul *ngIf="tasks.length !== 0; else empty" class="list-group">
+    <li *ngFor="let task of tasks" class="list-group-item">
+      <span class="align-middle">{{ task.text }} </span>
+      <div class="float-right" role="group">
+        <button
+          *ngIf="!task.compleated"
+          type="button"
+          class="btn btn-sm btn-success pad-action"
+          (click)="onDone(task.id)"
+        >
+          ✓
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-danger"
+          (click)="onDelete(task.id)"
+        >
+          Ｘ
+        </button>
+      </div>
+    </li>
+  </ul>
+  <ng-template #empty>No Items.</ng-template>
+</div>

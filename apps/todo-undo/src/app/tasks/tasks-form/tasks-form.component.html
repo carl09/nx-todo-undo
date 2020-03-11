@@ -1,0 +1,48 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-inline">
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="task" class="sr-only">New Task</label>
+    <input
+      type="text"
+      class="form-control"
+      id="task"
+      placeholder="New Task"
+      formControlName="task"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Add</button>
+
+  <button
+    type="button"
+    class="btn btn-light mb-2"
+    (click)="onUndo()"
+    [disabled]="!canUndo"
+  >
+    Undo
+  </button>
+  <button
+    type="button"
+    class="btn btn-light mb-2"
+    (click)="onRedo()"
+    [disabled]="canRedo"
+  >
+    Redo
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-light mb-2"
+    (click)="onShow()"
+    [disabled]="canRedo"
+  >
+    Show
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-light mb-2"
+    (click)="onHide()"
+    [disabled]="canRedo"
+  >
+    Hide
+  </button>
+</form>
